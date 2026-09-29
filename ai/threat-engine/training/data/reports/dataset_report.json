@@ -1,0 +1,199 @@
+{
+  "timestamp_utc": "2026-09-27T11:58:24.878829+00:00",
+  "total_samples": 0,
+  "class_counts": {
+    "benign": 0,
+    "suspicious": 0,
+    "phishing": 0,
+    "business_email_compromise": 0
+  },
+  "class_percentages": {
+    "benign": 0.0,
+    "suspicious": 0.0,
+    "phishing": 0.0,
+    "business_email_compromise": 0.0
+  },
+  "source_counts": {},
+  "source_label_counts": {},
+  "duplicate_count": 0,
+  "cross_source_duplicate_count": 0,
+  "empty_text_count": 0,
+  "missing_subject_count": 0,
+  "missing_body_count": 0,
+  "invalid_label_count": 0,
+  "sources_summary": [
+    {
+      "name": "Enron Email Dataset",
+      "authoritative_source": "Carnegie Mellon University School of Computer Science (https://www.cs.cmu.edu/~enron/)",
+      "source_url": "https://www.cs.cmu.edu/~enron/enron_mail_20150507.tar.gz",
+      "provenance_type": "authentic",
+      "license": "Public investigatory record released for research (no explicit formal open-source license grant)",
+      "license_verified": false,
+      "access_type": "public",
+      "allowed_for_training": false,
+      "source_sample_count": 500000,
+      "downloaded_count": 0,
+      "normalized_count": 0,
+      "limitations": [
+        "Unlabeled legitimate/business corpus mapped to benign as a modeling assumption; not natively labeled benign.",
+        "Historical corporate email from 1999-2002; formatting and headers differ from modern email ecosystems.",
+        "No formal open-source license grant from FERC or CMU; distributed as an investigatory research release."
+      ],
+      "verification_notes": "FERC investigatory public record made available for research; CMU redacted certain sensitive personal and financial information per requests of former employees. Unlabeled legitimate/business corpus -> benign mapping is a modeling assumption for the MAILTRACE training taxonomy, not an original threat label supplied by Enron."
+    },
+    {
+      "name": "Apache SpamAssassin Public Corpus",
+      "authoritative_source": "Apache SpamAssassin Project (https://spamassassin.apache.org/old/publiccorpus/)",
+      "source_url": "https://spamassassin.apache.org/old/publiccorpus/",
+      "provenance_type": "authentic",
+      "license": "Apache SpamAssassin testing corpus / donated user email (software is Apache 2.0; individual donated emails lack separate license grants)",
+      "license_verified": false,
+      "access_type": "public",
+      "allowed_for_training": false,
+      "source_sample_count": 6047,
+      "downloaded_count": 0,
+      "normalized_count": 0,
+      "limitations": [
+        "Spam category remains unresolved and rejected from training to prevent label noise.",
+        "Corpus dates from 2002-2005; does not reflect modern threat vectors.",
+        "Donated email archives lack individual copyright releases."
+      ],
+      "verification_notes": "Corpus intended by Apache SpamAssassin for spam filter evaluation and testing. Only easy_ham and hard_ham represent legitimate emails. The spam partition is unresolved and rejected because commercial bulk spam cannot be safely mapped to phishing or suspicious without specific threat indicators."
+    },
+    {
+      "name": "Nazario Phishing Corpus",
+      "authoritative_source": "Jose Nazario / monkey.org (https://monkey.org/~jose/phishing/)",
+      "source_url": "https://monkey.org/~jose/phishing/",
+      "provenance_type": "authentic",
+      "license": "No explicit license provided on distribution site (public research archive of adversarial emails)",
+      "license_verified": false,
+      "access_type": "public",
+      "allowed_for_training": false,
+      "source_sample_count": null,
+      "downloaded_count": 0,
+      "normalized_count": 0,
+      "limitations": [
+        "No explicit software or data license provided on monkey.org.",
+        "Contains raw malicious URLs, dead phishing links, and deceptive sender domains.",
+        "Total sample count is unverified prior to downloading and parsing individual mbox files."
+      ],
+      "verification_notes": "Longitudinal archival collection of raw phishing emails collected via honeypots between 2005 and 2024. Contains authentic adversarial credential lures and fraudulent links. The distribution site monkey.org does not provide a formal license."
+    },
+    {
+      "name": "BEC-2 Research Corpus",
+      "authoritative_source": "Rohit Dube, UC Berkeley (Preprint: 'Building a Business Email Compromise Research Dataset with Large Language Models', Oct 2024)",
+      "source_url": "https://www.researchgate.net/publication/384795274_Building_a_Business_Email_Compromise_Research_Dataset_with_Large_Language_Models",
+      "provenance_type": "generated_from_real_world_bec_examples",
+      "license": "Unverified / Author distribution upon research request",
+      "license_verified": false,
+      "access_type": "restricted",
+      "allowed_for_training": false,
+      "source_sample_count": 279,
+      "downloaded_count": 0,
+      "normalized_count": 0,
+      "limitations": [
+        "Public BEC data is substantially more limited than general legitimate/phishing email data. BEC-2 provides 279 generated samples based on real-world BEC examples rather than a large authentic mailbox corpus.",
+        "Provenance: LLM-generated variations, not authentic historical mailbox records.",
+        "License and distribution unverified; requires direct research contact."
+      ],
+      "verification_notes": "Contains 279 synthetic BEC emails generated by an LLM based on variations of real-world BEC scenarios. While validated with human analyst agreement scores, samples are researcher-generated rather than authentic mailbox telemetry. Must never be represented as authentic historical emails. No public open-source license is verified."
+    },
+    {
+      "name": "IWSPA APWG Phishing Corpus",
+      "authoritative_source": "Anti-Phishing Working Group (APWG) / IWSPA Shared Task (https://apwg.org/resources/)",
+      "source_url": "https://apwg.org/resources/",
+      "provenance_type": "anonymized_research_shared_task",
+      "license": "Restricted APWG Member Agreement / Institutional NDA Required",
+      "license_verified": false,
+      "access_type": "restricted",
+      "allowed_for_training": false,
+      "source_sample_count": null,
+      "downloaded_count": 0,
+      "normalized_count": 0,
+      "limitations": [
+        "Requires APWG membership / institutional data use agreement.",
+        "Cannot be downloaded or distributed automatically."
+      ],
+      "verification_notes": "Restricted institutional access. Requires signed institutional research agreement and membership with APWG. No automated download permitted."
+    }
+  ],
+  "license_status": {
+    "Enron Email Dataset": {
+      "license": "Public investigatory record released for research (no explicit formal open-source license grant)",
+      "license_verified": false,
+      "allowed_for_training": false
+    },
+    "Apache SpamAssassin Public Corpus": {
+      "license": "Apache SpamAssassin testing corpus / donated user email (software is Apache 2.0; individual donated emails lack separate license grants)",
+      "license_verified": false,
+      "allowed_for_training": false
+    },
+    "Nazario Phishing Corpus": {
+      "license": "No explicit license provided on distribution site (public research archive of adversarial emails)",
+      "license_verified": false,
+      "allowed_for_training": false
+    },
+    "BEC-2 Research Corpus": {
+      "license": "Unverified / Author distribution upon research request",
+      "license_verified": false,
+      "allowed_for_training": false
+    },
+    "IWSPA APWG Phishing Corpus": {
+      "license": "Restricted APWG Member Agreement / Institutional NDA Required",
+      "license_verified": false,
+      "allowed_for_training": false
+    }
+  },
+  "provenance_status": {
+    "Enron Email Dataset": {
+      "provenance_type": "authentic",
+      "source_sample_count": 500000,
+      "provenance_notes": "Publicly released FERC investigatory record hosted by CMU. Primary source for legitimate business email communication without security indicators. Note: Not natively labeled benign."
+    },
+    "Apache SpamAssassin Public Corpus": {
+      "provenance_type": "authentic",
+      "source_sample_count": 6047,
+      "provenance_notes": "Standard open spam benchmark. Only ham archives are eligible for benign training; generic bulk spam remains unresolved and rejected."
+    },
+    "Nazario Phishing Corpus": {
+      "provenance_type": "authentic",
+      "source_sample_count": null,
+      "provenance_notes": "Verified security research collection referenced across academic anti-phishing literature. Raw adversarial email telemetry without formal license grant."
+    },
+    "BEC-2 Research Corpus": {
+      "provenance_type": "generated_from_real_world_bec_examples",
+      "source_sample_count": 279,
+      "provenance_notes": "Generated from real-world BEC examples using LLMs. Not authentic collected mailbox corpus. Distributed via research preprint author contact."
+    },
+    "IWSPA APWG Phishing Corpus": {
+      "provenance_type": "anonymized_research_shared_task",
+      "source_sample_count": null,
+      "provenance_notes": "Restricted institutional access / agreement required. Marked allowed_for_training=false. No automated download allowed."
+    }
+  },
+  "train_ready": false,
+  "blocking_reasons": [
+    "Target dataset file missing: 'C:\\Users\\nairo\\Desktop\\MAILTRACE\\ai\\threat-engine\\training\\data\\dataset.csv' does not exist."
+  ],
+  "warnings": [],
+  "project_limitations": {
+    "bec_limitation": "Public BEC data is substantially more limited than general legitimate/phishing email data. BEC-2 provides 279 generated samples based on real-world BEC examples rather than a large authentic mailbox corpus.",
+    "suspicious_limitation": "No verified source currently supplies a defensible standalone suspicious label. Suspicious count remains 0 to prevent label fabrication."
+  },
+  "status": {
+    "phase": "2B-part2A",
+    "dataset_ready": false,
+    "training_allowed": false,
+    "total_samples": 0,
+    "classes": {
+      "benign": 0,
+      "suspicious": 0,
+      "phishing": 0,
+      "business_email_compromise": 0
+    },
+    "blocking_reasons": [
+      "Target dataset file missing: 'C:\\Users\\nairo\\Desktop\\MAILTRACE\\ai\\threat-engine\\training\\data\\dataset.csv' does not exist."
+    ],
+    "warnings": []
+  }
+}
