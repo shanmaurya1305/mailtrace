@@ -11,6 +11,25 @@
 
 ---
 
+## 📸 Platform Demonstration & Screenshots
+
+| 01 - SOC Dashboard & Health | 02 - Forensic Workbench Input |
+| :---: | :---: |
+| ![SOC Dashboard](docs/screenshots/01_dashboard_system_health.png) | ![Forensic Input](docs/screenshots/02_forensic_workbench_input.png) |
+| *Real-time microservice health check & status* | *Interactive header input with attack presets* |
+
+| 03 - Forensic Evidence & Auth | 04 - Received Hops & IOCs |
+| :---: | :---: |
+| ![Forensic Evidence](docs/screenshots/03_forensic_evidence_results.png) | ![Routing Hops & IOCs](docs/screenshots/04_routing_hops_and_iocs.png) |
+| *SPF/DKIM/DMARC alignment & evidence cards* | *Chronological MTA relay hops & extracted IOCs* |
+
+| 05 - Download Forensic JSON Report | 06 - Chrome Manifest V3 Extension |
+| :---: | :---: |
+| ![Download JSON Report](docs/screenshots/05_download_json_report.png) | ![Chrome Extension](docs/screenshots/06_chrome_extension_popup.png) |
+| *1-click formatted evidence export for SOC triage* | *Zero-permission DOM extraction popup for webmail* |
+
+---
+
 ## 🏗️ Monorepo Folder Structure
 
 ```
